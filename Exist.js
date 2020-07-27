@@ -41,3 +41,14 @@ const dfs = (hash, board, i, j, word, index) => {
   );
 };
 
+console.log(
+  exist(
+    [
+      ["A", "B", "C", "E"],
+      ["S", "F", "C", "S"],
+      ["A", "D", "E", "E"],
+    ],
+    "ABCB"
+  )
+);
+
