@@ -11,7 +11,8 @@ const isMatch = (s, p) => {
     
     dp[0][0]= true;
     
-    for ( let i = 1 ; i < p.length ; i ++ ) if ( p.charAt(i) === "*" ) dp[0][i] = true;
+    for ( let i = 1 ; i < p.length ; i ++ ) if ( p.charAt(i) == '*' && dp[0][i-1] ) 
+        dp[0][i+1] = true;
         
     
     
@@ -20,7 +21,7 @@ const isMatch = (s, p) => {
             
             if (p.charAt(j) == '.' || p.charAt(j) == s.charAt(i)) dp[i+1][j+1] = dp[i][j];
                         
-            if (p.charAt(j) == '*') {
+            else if (p.charAt(j) == '*') {
                 
                 if (p.charAt(j-1) != s.charAt(i) && p.charAt(j-1) != '.') 
                     dp[i+1][j+1] = dp[i+1][j-1];
