@@ -1,4 +1,8 @@
-
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {boolean}
+ */
 const isMatch = (s, p) => {
     
     if ( s === undefined || p === undefined ) return false;
