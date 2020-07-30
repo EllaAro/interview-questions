@@ -1,4 +1,7 @@
-
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
 const minPathSum = grid => {
     
     if ( grid === undefined || grid.length === 0 || grid[0].length === 0 )
