@@ -9,6 +9,10 @@
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
+/**
+* naive implemenation
+* preformance can be improved by using the heap data-structure
+*/
 const mergeKLists = (lists) => {
   // check for corner cases
   if (lists.length === 0 || lists === undefined) return null;
